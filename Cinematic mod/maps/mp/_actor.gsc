@@ -1016,7 +1016,7 @@ ActorRename()
 		argumentstring = getDvar("mvm_actor_rename");
 		arguments = StrTok(argumentstring, " ,");
 		actors = GetActor(arguments[0]);
-		if(isDefined(actors) && arguments[1] != "look") // make sure it's not possible to name an actor "look"
+		if(isDefined(actors) && arguments[1] != "look" && arguments[1] != "all") // make sure it's not possible to name an actor "look"
 		{
 			foreach (actor in actors)
 			{
