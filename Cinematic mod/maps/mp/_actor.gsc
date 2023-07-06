@@ -157,7 +157,7 @@ GetActor(argument)
 		{
 			vec = anglestoforward(self getPlayerAngles());
 			entity = BulletTrace( self getTagOrigin("tag_eye"), self getTagOrigin("tag_eye") + (vec[0] * 500, vec[1] * 500, vec[2] * 500), 0, self )[ "entity" ];
-			if(isDefined(entity.model) && entity.name == actor.name)
+			if(isDefined(entity) && isDefined(entity.model) && entity.name == actor.name)
 			{
 				ret = [];
 				ret[0] = actor;
