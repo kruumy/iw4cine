@@ -26,6 +26,7 @@ actor()
 	level._effect["explosion3"] = loadfx("explosions/grenadeexp_concrete_1");
 	
 	level.actorCount = 1;
+	level.actor = [];
 	setDvarIfUninitialized("ui_showActorNames", "1");
 }
 
