@@ -712,24 +712,24 @@ ActorBack()
 			actor scriptModelPlayAnim(actor.assignedanim);
 			actor.head scriptModelPlayAnim(actor.assignedanim);
 
-			if(isDefined(actor.actorback_fx_bone) && isDefined(actor.actorback_fx))
-			{
-				playFx(level._effect[actor.actorback_fx], actor getTagOrigin(actor.actorback_fx_bone));
-			}
-
 			if (actor.hitbox.isDead == true)
 			{
 				actor.hitbox.isDead = false;
 				actor.hitbox thread ActorHandleDamage(actor.hitbox, actor);
 			}
 		}
-		wait 0.11;
+		wait 0.2;
 		foreach(actor in level.actor)
 		{
 			if(isDefined(actor.walk_actorback) && actor.walk_actorback == true && isDefined(actor.walk_speed) && isDefined(actor.walk_direction))
 			{
 				MakeActorNormWalk(actor);
 			}
+			if(isDefined(actor.actorback_fx_bone) && isDefined(actor.actorback_fx))
+			{
+				playFx(level._effect[actor.actorback_fx], actor getTagOrigin(actor.actorback_fx_bone));
+			}
+
 		}
 		self iPrintLn("All actors reset!");
 	}
