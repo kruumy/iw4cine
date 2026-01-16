@@ -1,6 +1,6 @@
 # *Modern Warfare 3 Cinematic Mod*
 
-**A GSC modification for IW3M to create cinematics**
+**A GSC modification for IW5 to create cinematics**
 
 This mod was designed for video editors who needs to create cinematics in the Multiplayer version of the game Call of Duty : Modern Warfare 3.
 
